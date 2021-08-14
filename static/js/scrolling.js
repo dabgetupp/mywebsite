@@ -1,5 +1,5 @@
 $(window).scroll(function(){
-    $('nav').toggleClass('bg-dark', $(this).scrollTop()>=350);
+    $('nav').toggleClass('bg-dark', $(this).scrollTop()>=200);
     var scroll = $(window).scrollTop();
 
     document.getElementById("myBody").style.marginTop = (-0 -scroll) + "px";
