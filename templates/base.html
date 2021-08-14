@@ -4,8 +4,12 @@
 <head>
     <title>{{title}}</title>
     {% include "snippets/styles.html" %}
-
+    {% block app_css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+    {%endblock app_css %}
+
+    
 </head>
 <body>
     {% include "snippets/navbar.html" %}
@@ -27,10 +31,8 @@
                 {% block content-1 %}
 
                 {% endblock content-1 %}
-        </div>
     </div>
-
-
+    
     <div class="container bg-info text-white shadow" style="height: 300;">
 
                 {% block content-2 %}
@@ -38,6 +40,8 @@
                 {% endblock content-2 %}
 
     </div>
+    </div>
+
 
     {% include "snippets/scripts.html" %}
     
